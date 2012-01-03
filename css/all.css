@@ -1,0 +1,111 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html, body {
+	color: #FF8800;
+	background-color: #222;
+	font-family: "Monospace", serif;
+	font-size: 11px;
+}
+a {
+	color: #FF8800;
+}
+div {
+	background-color: #222;
+}
+#topbar {
+	position: fixed;
+	top: 0px;
+	left:0px;
+	z-index: 1000;
+	//width: 100%;
+	padding: 2px 4px 1px 4px;
+}
+#topbar span {
+	font-weight: bold;
+	margin: 0 1px 0 1px;
+}
+#topbar img {
+  position: relative;
+  top: 2px;
+  border: 0;
+}
+#images {
+	margin-top: 20px;
+}
+.image {
+	margin: 2px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+.exif {
+	position: absolute;
+	left: 8px;
+	bottom: 8px;
+	background: white;
+	color: black;
+	overflow: hidden;
+	padding: 5px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	display: none;
+}
+@-webkit-keyframes slide-up {
+	from {
+		-webkit-transform: translateY(100%);
+	}
+	to {
+		-webkit-transform: translateY(0%);
+	}
+}
+@-moz-keyframes slide-up {
+	from {
+		-moz-transform: translateY(100%);
+	}
+	to {
+		-moz-transform: translateY(0%);
+	}
+}
+@-webkit-keyframes slide-down {
+	from {
+		-webkit-transform: translateY(0%);
+	}
+	to {
+		-webkit-transform: translateY(100%);
+	}
+}
+@-moz-keyframes slide-down {
+	from {
+		-moz-transform: translateY(0%);
+	}
+	to {
+		-moz-transform: translateY(100%);
+	}
+}
+.exif.slide-up {
+	-webkit-animation-name: slide-up;
+	-webkit-animation-duration: 0.1s;
+	-moz-animation-name: slide-up;
+	-moz-animation-duration: 0.1s;
+}
+.exif.slide-down {
+	-webkit-animation-name: slide-down;
+	-webkit-animation-duration: 0.5s;
+	-moz-animation-name: slide-down;
+	-moz-animation-duration: 0.5s;
+}
+#noscript {
+	background: #f88;
+	border: 1px solid #f44;
+	color: black;
+	padding: 5px 20px 5px 20px;
+	width: 640px;
+	margin: 32px auto 32px auto;
+	font-size: 13px;
+	text-align: center;
+}
+#noscript a {
+	color: #00F;
+}
