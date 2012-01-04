@@ -1,5 +1,5 @@
 /*
-	
+
 	This file is part of OhHi
 	http://github.com/brandon-lockaby/OhHi
 	
@@ -9,16 +9,3 @@
 	http://creativecommons.org/licenses/by-nc-sa/3.0/
 	
 */
-
-<?php
-	$cwd = str_replace('\\', '/', getcwd());
-	$swd = dirname($_SERVER["SCRIPT_NAME"]);
-	if(substr($cwd, -strlen($swd)) === $swd) {
-		$site_root = substr($cwd, 0, strrpos($cwd, $swd));
-	}
-	else {
-		$site_root = $cwd;
-	}
-	require_once($site_root . '/oh-hi/OhHi.php');
-	OhHi::run();
-?>
